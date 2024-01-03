@@ -1,0 +1,118 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jan 03, 2024 at 06:00 PM
+-- Server version: 10.5.20-MariaDB
+-- PHP Version: 7.3.33
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `id21630621_recipe`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipes`
+--
+
+CREATE TABLE `recipes` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `imageUrl` varchar(1000) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `recipes`
+--
+
+INSERT INTO `recipes` (`id`, `name`, `description`, `imageUrl`, `user_id`) VALUES
+(1, 'Spaghetti Bolognese', 'Everyone needs a great everyday Spaghetti Bolognese recipe, and this is mine! The Bolognese Sauce is rich, thick and has beautiful depth of flavour. It’s perfect for a quick midweek meal but even better if you can simmer it for a couple of hours! Serve it over pasta, stuff into jacket potatoes, make an epic Lasagna or Baked Spaghetti Pie!\r\nINGREDIENTS: \r\n1. Worcestershire sauce: it just adds that little extra something-something. I get antsy if I get caught in a situation where I have to do without;\r\n\r\n2. Beef bouillon cubes (beef stock cubes) for extra depth of flavour in the sauce, to compensate for this being an everyday midweek version rather than a traditional slow cooked Bolognese Ragu which starts with a soffrito (onion, celery, carrot slowly sautéed) as well as pancetta.\r\n\r\n3. Sugar, if needed: just a little bit goes a long way to transform the sauce if you happen not to be using high quality, sweet Italian canned tomatoes. Supermarket canned tomatoes here in Australia are notoriously sour. Especially the Australian ones – it pains me so much to say that, but it’s true.\r\n\r\n', 'https://t3.ftcdn.net/jpg/01/09/75/90/360_F_109759077_SVp62TBuHkSn3UsGW4dBOm9R0ALVetYw.jpg', NULL),
+(2, 'Angel hair pasta', 'The long, delicate strands of angel hair pasta (aka capellini) are best served in light or creamy sauces. The thin strands can go M.I.A. in chunky, meaty sauces.\r\nINGREDIENTS:\r\n8 ounces angel hair pasta\r\nSalt, to taste\r\n1/4 cup extra virgin olive oil\r\n2 tablespoons finely chopped fresh herbs such as rosemary, thyme, oregano\r\n1/4 cup chopped fresh parsley\r\n3 cloves garlic, sliced\r\n1/8 teaspoon chili pepper flakes, or more to taste\r\n1/2 to 1 teaspoon freshly ground black pepper, to taste\r\n1/2 cup grated Parmesan cheese', 'https://www.acouplecooks.com/wp-content/uploads/2022/02/Angel-Hair-Pasta-003.jpg', NULL),
+(3, 'Bow Tie Pasta (Farfalle)', 'Use bow tie pasta to dress up any dish that calls for small pasta shapes, such as penne or shells. Also known as farfalle.\r\nINGREDIETS:\r\nBow Tie Pasta – also known as farfalle or butterfly pasta. These hold the sauce quite perfectly, plus they are a fun pasta shape for kids.\r\nGarlic – tasty garlic to start off this dish.\r\nTomatoes – I made this recipe fast and easy by using canned diced tomatoes! Use the petite diced if you have picky eaters.\r\nSugar – this is to help cut the acidity of the canned tomatoes.\r\nHeavy Cream – this adds creaminess to the sauce.\r\nParmesan – use fresh hand grated parmesan for best melting results.\r\nBasil Leaves – last but not least, is basil leaves! Slice them thin and enjoy their fresh taste.', 'https://i0.wp.com/www.thedishonhealthy.com/wp-content/uploads/2018/07/Creamy-Bow-Tie-Pasta.jpg?resize=663%2C663&ssl=1', NULL),
+(4, ' Fettuccine Pasta', 'Fettuccine is an egg pasta cut into long, narrow ribbons. It is often served with cream sauces, as in the classic Fettuccine Alfredo. You can use fettuccine in any recipe that calls for linguine or spaghetti.\r\n\r\nINGREDIENTS\r\n10 ounces fettuccini pasta\r\n½ cup butter\r\n5 cloves garlic, chopped\r\n1 cup heavy cream\r\n1 egg yolk\r\n2 cups freshly grated Parmesan cheese\r\n2 tablespoons dried parsley', 'https://media.istockphoto.com/id/506916161/photo/homemade-fettucini-aflredo-pasta.jpg?s=612x612&w=0&k=20&c=Pa3dwlsqnPfOKgldMXuHVy5Aqmtbp8wThbj6V_4u5us=', NULL),
+(5, 'tian', 'A tian is primarily made from two to four types of sliced vegetables—think zucchini and other squash, eggplant, and tomatoes—arranged in alternating layers in a baking dish for a bold, appetizing look. Sometimes the vegetables are cubed or shredded, so they cook into a supremely tender, olive oil-softened dish.\r\nINGREDIENTS: \r\nZucchini: Zucchini is one of the staple vegetables in tian. They add a light, fresh flavor to the tian. I sometimes like to add yellow squash to add a touch of color. \r\nEggplant: Eggplant is another essential vegetable and adds a creamy texture to the tian. \r\nTomato: Tomatoes bring a vibrant and juicy element to the tian and a nice color.\r\nOlive oil: Olive oil not only enhances flavour, it also provides heart-healthy monounsaturated fats.\r\nGarlic: Garlic infuses the tian with a wonderful aroma and savory taste. \r\nDry herbs: I used the traditional Herbes de Provence, mix of dry herbs including among others thyme, rosemary, savory and oregano. You can replace Herbes de Provence your own mix of dry herbs of your favorite Italian seasoning.', 'https://i.stack.imgur.com/b5oLf.pnghttps://www.acouplecooks.com/wp-content/uploads/2022/02/Angel-Hair-Pasta-003.jpg', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `email`) VALUES
+(5, 'amina', '$2y$10$Q3Q3tf9MomWqP/rq18sd3.aiL2rfw5LBQq2JX9UXUYNVehlUSB45K', 'aminahaydar51@gmail.com'),
+(6, 'teyaharajli', '$2y$10$OHLau00spMhfMB34zzWRFecSUhRxrDq.tmp3fx8Y1XXdOB9iJHUUu', 'teyaharajli@hotmail.com'),
+(7, 'Teya', '$2y$10$a1Ii3hdqlwDdNR2tNQVeN.LD9KOtaLmmCN8kJ4lr1tmCVGkHycoqO', 'tya@gmail.com'),
+(8, 'teya1', '$2y$10$nWWExaLuJZdusw3CX9GIFu9mqCO82y7ix8UHxzfELAGlxVHnqlC2u', '123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `recipes`
+--
+ALTER TABLE `recipes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_user_id` (`user_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `recipes`
+--
+ALTER TABLE `recipes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `recipes`
+--
+ALTER TABLE `recipes`
+  ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
